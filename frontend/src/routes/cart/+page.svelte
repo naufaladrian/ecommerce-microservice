@@ -73,8 +73,6 @@
 		<ul class="space-y-4">
 			{#each cartItems as item}
 				<li class="flex items-center justify-between p-4 bg-gray-100 rounded-lg shadow-sm">
-					<pre>{item.id}</pre>
-					<pre>{item.product_id}</pre>
 					<div>
 						<p class="text-lg font-semibold">Product Name: {item.product_name}</p>
 						<p class="text-gray-700">Quantity: {item.quantity}</p>
