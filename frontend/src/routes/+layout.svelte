@@ -10,10 +10,13 @@
 			<a href="/" class="cursor-pointer hover:underline"> Home </a>
 		</li>
 		<li>
-			<a href="/add-product" class="cursor-pointer hover:underline"> Add Product </a>
+			<a href="/manage" class="cursor-pointer hover:underline"> Manage Products </a>
 		</li>
 		<li>
 			<a href="/cart" class="cursor-pointer hover:underline"> Keranjang </a>
+		</li>
+		<li>
+			<a href="/history" class="cursor-pointer hover:underline"> History </a>
 		</li>
 	</ul>
 </nav>
