@@ -27,7 +27,7 @@
 	});
 </script>
 
-<main class="container mx-auto p-8">
+<main class="container mx-auto p-8 min-h-screen">
 	<h1 class="text-3xl font-bold text-center my-8">Product List</h1>
 
 	{#if products.length > 0}
