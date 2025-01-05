@@ -12,12 +12,16 @@
 
 	// Fungsi untuk mengambil data produk dari API
 	async function fetchProducts() {
-		const response = await fetch('http://localhost:3000/products');
-		if (response.ok) {
-			products = await response.json();
-			console.log(products); // Tambahkan log untuk memeriksa data
-		} else {
-			console.error('Failed to fetch products');
+		try {
+			const response = await fetch('http://localhost:3000/products');
+			if (response.ok) {
+				products = await response.json();
+				console.log(products); // Tambahkan log untuk memeriksa data
+			} else {
+				console.error('Failed to fetch products');
+			}
+		} catch (error) {
+			console.error('Error fetching products:', error);
 		}
 	}
 
@@ -33,7 +37,9 @@
 	{#if products.length > 0}
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
 			{#each products as product}
-				<ProductCard {product} />
+				<a href={`/product-detail?id=${product.id}`}>
+					<ProductCard {product} />
+				</a>
 			{/each}
 		</div>
 	{:else}
